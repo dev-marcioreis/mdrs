@@ -24,9 +24,12 @@ scrollReveal.reveal(`.tech__info, .box__text`, {origin: 'bottom', interval: 100}
 
 scrollReveal.reveal(`.recent__card, .r__card`, {origin: 'bottom', interval: 100})
 
+scrollReveal.reveal(`.portfolio__content`, {origin: 'bottom', interval: 200})
+
 scrollReveal.reveal(`.sec`, {origin: 'bottom', interval: 200})
 
 scrollReveal.reveal(`.copy`, {origin: 'bottom'})
+
 
 
 

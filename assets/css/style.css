@@ -121,6 +121,9 @@ img {
 
 /*==========Media Query==========*/
 @media (max-width: 992px) {
+  html {
+    scroll-padding-top: 1.5rem;
+  }
   body {
     font-size: 1rem;
   }
@@ -367,7 +370,7 @@ img {
   .home__socials {
     flex-direction: row;
     gap: 3rem;
-    top: 80%;
+    top: 70%;
     left: 0;
     right: 0;
     box-shadow: none;
@@ -655,6 +658,7 @@ img {
 /*==========Media Query Small Portfolio==========*/
 @media (max-width: 600px) {
   .portfolio__container {
+    margin-block-start: 4rem;
     padding: 0 2rem;
     gap: 3.5rem;
   }
