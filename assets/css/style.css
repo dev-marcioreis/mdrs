@@ -199,7 +199,7 @@ img {
 
 
 /*==========Cookie==========*/
-.wrapper {
+/* .wrapper {
   position: fixed;
   bottom: 1.5rem;
   left: 1.5rem;
@@ -237,14 +237,14 @@ img {
 }
 .btn__content button:hover {
   box-shadow: var(--shadow-1);
-}
+} */
 
 /*==========JavaScript==========*/
-.wrapper.hideCookie {
+/* .wrapper.hideCookie {
   transition: var(--transition);
   opacity: 0;
   visibility: hidden;
-}
+} */
 
 
 /*==========Media Query Mobile Cookie==========*/
