@@ -45,3 +45,25 @@ const scrollUp = () => {
 }
 
 window.addEventListener('scroll', scrollUp)
+
+
+// Cookie
+const cookie = document.querySelector('.wrapper')
+const cookieBtn = document.querySelector('.btn__content button')
+
+cookieBtn.addEventListener('click', () => {
+
+    // Configurando o cookie por um mês, após um mês o cookie será expirado automaticamente
+    document.cookie = 'CookieBy=MarcioPortfólio; max-age=' + 60 * 60 * 24 * 30
+
+    if(document.cookie) {
+        cookie.classList.add('hideCookie')
+    } else {
+        alert('O cookie não pode ser definido!')
+    }
+
+})
+
+// hide the cookie if box cookie is set and not expired
+let checkCookie =  document.cookie.indexOf('CookieBy=MarcioPortfólio')
+checkCookie != -1 ? cookie.classList.add('hideCookie') : cookie.classList.remove('hideCookie')
