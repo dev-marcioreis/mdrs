@@ -5,12 +5,14 @@ const navbarMenu =  document.querySelector('.navbar')
 
 const showNavbarMenu = () => {
     navbarMenu.style.left = '0'
+    openNavbarBtn.style.display = 'none'
 }
 
 openNavbarBtn.addEventListener('click', showNavbarMenu)
 
 const hideNavbarMenu = () => {
     navbarMenu.style.left = '-100%'
+    openNavbarBtn.style.display = 'inline-block'
 }
 
 closeNavbarBtn.addEventListener('click', hideNavbarMenu)
