@@ -32,6 +32,7 @@
   --line-height: 1.6;
 
   --transition: all 400ms ease-in-out;
+  --transition-1: all 1s ease-in-out;
   --transition-cubic: all cubic-bezier(0.175, 0.885, 0.32, 1.75) .4s;
 
   --container-lg: 80%;
@@ -161,7 +162,7 @@ img {
 .scroll__up {
   position: fixed;
   right: 2rem;
-  bottom: -20%;
+  top: -100%;
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
@@ -170,11 +171,14 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: var(--transition);
+  transition: var(--transition-1);
+  opacity: 0;
+  visibility: hidden;
   z-index: 99;
 }
 .scroll__up:hover {
   background: var(--color-yellow);
+  transform: translateY(-.25rem);
 }
 .scroll__up i {
   font-size: 2rem;
@@ -186,7 +190,9 @@ img {
 
 /*==========JavaScript==========*/
 .show-scroll {
-  bottom: 1rem;
+  top: 93%;
+  opacity: 1;
+  visibility: visible;
 }
 
 /*==========Media Query Mobile Scroll Up==========*/
@@ -338,6 +344,11 @@ img {
 .navbar__link {
   font-size: 1.1rem;
   text-transform: capitalize;
+  transition: var(--transition);
+}
+.navbar__link:hover {
+  color: var(--color-yellow);
+  letter-spacing: 3px;
 }
 .close__btn {
   position: absolute;
@@ -345,6 +356,13 @@ img {
   right: 0;
   font-size: 2rem;
   cursor: pointer;
+}
+.open__btn, .close__btn {
+  transition: var(--transition);
+}
+.open__btn:hover, .close__btn:hover {
+  color: var(--color-yellow);
+  transform: scale(1.1);
 }
 
 
@@ -454,8 +472,24 @@ img {
   height: 3rem;
   border-radius: 50%;
   border: 2px solid var(--color-yellow);
-  box-shadow: var(--shadow-1);
+  box-shadow: var(--shadow-2);
+  transition: var(--transition);
+  animation: 5s up linear infinite;
 }
+
+@keyframes up {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+    box-shadow: var(--shadow-1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .profile__image p {
   text-transform: capitalize;
   font-weight: 700;
@@ -525,7 +559,21 @@ img {
   border-radius: 50%;
   box-shadow: var(--shadow);
   transition: var(--transition);
+  animation: 2s rotateImg linear infinite;
 }
+
+@keyframes rotateImg {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 .box:hover img {
   transform: scale(1.1);
 }
