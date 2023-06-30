@@ -2,7 +2,7 @@
 
 ---
 
-Este é meu portfólio atual.
+Portfólio atual.
 
 ## 🚀 Finalizado
 
